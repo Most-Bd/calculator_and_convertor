@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Utilities</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="script.js" defer></script>
+  </head>
+  <body id="body">
+    <main>
+      <!-- Calculator section -->
+      <nav class="nav-bar">
+        <h2>M.UTILS</h2>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="512"
+          height="512"
+          viewBox="0 0 512 512"
+          id="burger-menu"
+        >
+          <title>ionicons-v5-j</title>
+          <line
+            x1="80"
+            y1="160"
+            x2="432"
+            y2="160"
+            style="
+              fill: none;
+              stroke-linecap: round;
+              stroke-miterlimit: 10;
+              stroke-width: 48px;
+            "
+          />
+          <line
+            x1="80"
+            y1="256"
+            x2="432"
+            y2="256"
+            style="
+              fill: none;
+              stroke-linecap: round;
+              stroke-miterlimit: 10;
+              stroke-width: 48px;
+            "
+          />
+          <line
+            x1="80"
+            y1="352"
+            x2="432"
+            y2="352"
+            style="
+              fill: none;
+              stroke-linecap: round;
+              stroke-miterlimit: 10;
+              stroke-width: 48px;
+            "
+          />
+        </svg>
+        <ul class="nav-items">
+          <li class="nav-item"><a href="#calc-section">Calculator</a></li>
+          <li class="nav-item"><a href="#conv-section">Unit Convertor</a></li>
+        </ul>
+      </nav>
+      <section id="calc-section">
+        <h1 class="title">Calculator</h1>
+        <div id="calculator">
+          <p id="calc-result"></p>
+          <p id="calc-illust"></p>
+          <div class="main-buttons-container erasers">
+            <button name="erase" value="erase" class="erase">AC</button>
+            <button name="back" value="back" class="back">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 576">
+                <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  d="M576 128c0-35.3-28.7-64-64-64H205.3c-17 0-33.3 6.7-45.3 18.7L9.4 233.4c-6 6-9.4 14.1-9.4 22.6s3.4 16.6 9.4 22.6L160 429.3c12 12 28.3 18.7 45.3 18.7H512c35.3 0 64-28.7 64-64V128zM271 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="calc-container">
+            <div class="container">
+              <div class="main-buttons-container values">
+                <button name="1" value="1" class="calculator-value">1</button>
+                <button name="2" value="2" class="calculator-value">2</button>
+                <button name="3" value="3" class="calculator-value">3</button>
+                <button name="4" value="4" class="calculator-value">4</button>
+                <button name="5" value="5" class="calculator-value">5</button>
+                <button name="6" value="6" class="calculator-value">6</button>
+                <button name="7" value="7" class="calculator-value">7</button>
+                <button name="8" value="8" class="calculator-value">8</button>
+                <button name="9" value="9" class="calculator-value">9</button>
+                <button name="0" value="0" class="calculator-value">0</button>
+                <button name="." value="." class="calculator-value">.</button>
+              </div>
+              <div class="main-buttons-container operators">
+                <button name="+" value="+" class="calculator-operator operat">
+                  +
+                </button>
+                <button name="-" value="-" class="calculator-operator operat">
+                  -
+                </button>
+                <button name="*" value="*" class="calculator-operator operat">
+                  *
+                </button>
+                <button name="/" value="/" class="calculator-operator operat">
+                  /
+                </button>
+                <button
+                  name="="
+                  value="="
+                  id="equals"
+                  class="calculator-operator"
+                >
+                  =
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Convertor section -->
+      <section id="conv-section">
+        <h1 class="title">Unit Converter</h1>
+        <div id="convertor">
+          <select class="conversion-type">
+            <option class="conversion-option" value="temperature" selected>
+              Temperature
+            </option>
+            <option class="conversion-option" value="length">
+              Length / Distance
+            </option>
+            <option class="conversion-option" value="mass">Mass</option>
+            <option class="conversion-option" value="volume">Volume</option>
+            <option class="conversion-option" value="time">Time</option>
+          </select>
+          <label for="conversion-value-start">From</label>
+          <input
+            type="number"
+            id="conversion-value-start"
+            class="conversion-value start"
+            placeholder="the amount to convert"
+            value=""
+          />
+          <select class="conversion-unit-start"></select>
+          <label for="conversion-value-end">To</label>
+          <input
+            type="number"
+            id="conversion-value-end"
+            class="conversion-value end"
+            placeholder="conversion result"
+            value=""
+            disabled
+          />
+          <select class="conversion-unit-end"></select>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
